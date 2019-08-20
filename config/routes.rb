@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
-  # get 'boking/destroy'
-  # get 'beaches/index'
-  # get 'beaches/show'
+  resources :beaches
+  
   devise_for :users
    resources :beaches, only: [:index, :show] do
      resources :bookings
