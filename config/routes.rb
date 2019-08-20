@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'beaches/index'
+  resources :beaches
   get 'beaches/show'
   devise_for :users
   root to: 'pages#home'
