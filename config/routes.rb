@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
- # resources 'shared/beaches'
-#  get 'beaches/index'
-#  get 'beaches/show'
+ #resources 'shared/beaches'
+  get 'beaches/index'
+  get 'beaches/show'
   devise_for :users
    resources :beaches #do
 #     resources :bookings
