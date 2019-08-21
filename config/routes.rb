@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :beaches
-  
+
   devise_for :users
    resources :beaches, only: [:index, :show] do
      resources :bookings

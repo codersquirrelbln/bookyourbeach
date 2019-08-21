@@ -1,4 +1,8 @@
 class BookingsController < ApplicationController
+  def new
+    @booking = Booking.new
+  end
+
   def create
     @booking = Booking.new(bookings_params)
     if @booking.save
@@ -6,6 +10,10 @@ class BookingsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def show
+    @booking = Booking.find(params[:id])
   end
 
   def destroy
