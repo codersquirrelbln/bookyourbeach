@@ -1,1 +1,24 @@
 <h1>Our Dashboard</h1>
+
+<div class="row">
+  <% @bookings.each do |booking|  %>
+  <div class="col-xs-12 col-md-4">
+<div class="card-trip">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+  <div class="card-trip-infos">
+    <div>
+      <h6> <%= booking.start_date %> </h6>
+      <h6> <%= booking.end_date %> </h6>
+      <% number_of_days = (booking.end_date - booking.start_date).to_i %>
+      <h6 class="card-trip-pricing"><%= number_of_days %></h6> <!-- insert pricing calcultaion -->
+    </div>
+  </div>
+</div>
+  </div>
+  <% end %>
+</div>
+
+
+
+
+
