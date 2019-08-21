@@ -1,1 +1,22 @@
-<%= render 'shared/card'%>
+<div class="container">
+<div class="row">
+  <% @beaches.each do |beach| %>
+  <div class="col-xs-12 col-md-4">
+<div class="card-trip">
+  <img src= <%= beach.photo %> />
+  <div class="card-trip-infos">
+      <h2><%= beach.name %></h2>
+      <p><%= beach.description %></p>
+      <div class="price-info">
+        <strong>Rent per day:</strong>
+        <p><%= beach.rent_per_day %>€</p>
+      </div>
+  </div>
+    <%= link_to "", beach_path(beach), class: "card-link"%>
+</div>
+  </div>
+  <% end %>
+</div>
+</div>
+
+
