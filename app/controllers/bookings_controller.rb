@@ -33,14 +33,14 @@ class BookingsController < ApplicationController
 
   def update
     @booking = Booking.find(params[:id])
-
+  end
 
   def bookings_params
     params.require(:booking).permit(:start_date, :end_date)
-    if @booking.update(params[:booking].permit(:client_id, :start_time, :length))
-      flash[:notice] = 'Your booking was updated succesfully'
-    else
-      render 'edit'
-    end
+    # if @booking.update(params[:booking].permit(:client_id, :start_time, :length))
+    #   flash[:notice] = 'Your booking was updated succesfully'
+    # else
+    #   render 'edit'
+    # end
   end
 end
