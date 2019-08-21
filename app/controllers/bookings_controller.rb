@@ -1,10 +1,14 @@
 class BookingsController < ApplicationController
   def new
     @booking = Booking.new
+    @beach = Beach.find(params[:beach_id])
   end
 
   def create
+    @beach = Beach.find(params[:beach_id])
     @booking = Booking.new(bookings_params)
+    @booking.user = current_user
+    @booking.beach = @beach
     if @booking.save
       redirect_to dashboard_path
     else
@@ -12,9 +16,10 @@ class BookingsController < ApplicationController
     end
   end
 
-  def show
-    @booking = Booking.find(params[:id])
-  end
+  # def show
+  #   @booking = Booking.find(params[:id])
+
+  # end
 
   def destroy
     @booking = Booking.find(params[:id])
@@ -25,6 +30,6 @@ class BookingsController < ApplicationController
   private
 
   def bookings_params
-    params.require(:booking).permit(:start_date, :end_date, :beach_id, :user_id)
+    params.require(:booking).permit(:start_date, :end_date)
   end
 end

@@ -8,6 +8,7 @@ class PagesController < ApplicationController
   end
 
   def dashboard
+   # @beach = Booking.find(params[:beach_id])
     @bookings = current_user.bookings
   end
 end
