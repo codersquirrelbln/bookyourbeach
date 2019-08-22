@@ -17,6 +17,10 @@
 .fas fa-umbrella-beach {
   color: rgba(20, 198, 226, 0.9);
 }
-.navbar navbar-expand-sm navbar-light navbar-lewagon{
-  color: red;
+.navbar-nav .nav-item a {
+  color: black !important;
+  font-size: 17px;
+}
+.navbar-nav .nav-item a:hover {
+  color: red !important;
 }
