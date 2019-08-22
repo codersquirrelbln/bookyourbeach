@@ -33,6 +33,13 @@
   padding: 16px;
 }
 
+.navigation {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .card-trip {
   overflow: hidden;
   background: white;
