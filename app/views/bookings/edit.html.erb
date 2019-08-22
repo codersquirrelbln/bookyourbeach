@@ -1,7 +1,52 @@
-<!-- wait for ronan to finish the beach show page</!-->
-<!-- show the edit form -->
-<!-- simple form to take over the dates already filled in bookings(params[:booking_id]) -->
 
-<h1>Booking edits</h1>
+
+
+<div class="container">
+  <div class="row">
+    <div class="card-product">
+      <div class="col-xs-12 col-md-4">
+        <div class ="card-product img">
+        <img src= <%= @beach.photo %> />
+        </div>
+      </div>
+
+    <div class="col-xs-12 col-md-4">
+      <div class="card-product-infos">
+
+        <p> <strong>Name:</strong>
+        <%= @beach.name %></p>
+
+         <p> <strong>Description:</strong>
+         <%= @beach.description %></p>
+
+         <p> <strong>Location:</strong>
+         <%= @beach.location %></p>
+
+         <p> <strong>Rent per day:</strong>
+         <%= @beach.rent_per_day %> €</p>
+      </div>
+    </div>
+
+      <div class="col-xs-12 col-md-4">
+        <h1>Change Booking</h1>
+          <%= simple_form_for [@booking] do |f| %>
+          <%= f.input :start_date %>
+          <%= f.input :end_date %>
+          <%= f.submit "Save changes", class: "btn btn-warning" %>
+          <%= link_to 'Discard', dashboard_path, class: "btn btn-warning"   %>
+          <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
 
 

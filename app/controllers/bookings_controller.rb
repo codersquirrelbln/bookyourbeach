@@ -30,9 +30,12 @@ class BookingsController < ApplicationController
 
   def edit
     @booking = Booking.find(params[:id])
+    @beach = @booking.beach
+
   end
 
   def update
+    raise
     @booking = Booking.find(params[:id])
   end
 
