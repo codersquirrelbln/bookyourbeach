@@ -103,6 +103,42 @@
   height: 500px;
 }
 
+.card-product2 {
+  overflow: hidden;
+  height: 200px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+
+.card-product2 img {
+  height: 100%;
+  width: 200px;
+  object-fit: cover;
+  padding-right: 10px;
+}
+
+.card-product2 h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-product2 p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 0px;
+
+}
+
+.card-product2 .card-product-infos {
+  padding: 0px;
+}
+
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
   .cards {
