@@ -11,11 +11,15 @@ Rails.application.routes.draw do
 
 
   devise_for :users
-   resources :beaches, only: [:index, :show] do
-     resources :bookings
+
+  resources :beaches, only: [:index, :show] do
+    resources :bookings, only: [:new, :create]
   end
-  root to: 'pages#home'
+
+  resources :bookings, only: [:edit, :update, :show, :destroy]
+
+  root to: 'beaches#index'
   get 'dashboard', to: 'pages#dashboard'
-  # get 'show' to: 'beaches#show'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
