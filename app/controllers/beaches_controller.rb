@@ -7,7 +7,7 @@ class BeachesController < ApplicationController
 
   def show
     @beach = Beach.find(params[:id])
+    @booking = Booking.new
   end
-
 end
 

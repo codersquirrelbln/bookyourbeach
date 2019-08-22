@@ -1,23 +1,45 @@
+
 <div class="container">
-  <div class="card-product">
-  <img src= <%= @beach.photo %> />
-  <div class="card-product-infos">
+  <div class="row">
+    <div class="card-product">
+      <div class="col-xs-12 col-md-4">
+        <div class ="card-product img">
+        <img src= <%= @beach.photo %> />
+        </div>
+      </div>
 
- <p> <strong>Name:</strong>
-  <%= @beach.name %></p>
+    <div class="col-xs-12 col-md-4">
+      <div class="card-product-infos">
 
- <p> <strong>Description:</strong>
- <%= @beach.description %></p>
+        <p> <strong>Name:</strong>
+        <%= @beach.name %></p>
 
- <p> <strong>Location:</strong>
- <%= @beach.location %></p>
+         <p> <strong>Description:</strong>
+         <%= @beach.description %></p>
 
- <p> <strong>Rent per day:</strong>
- <%= @beach.rent_per_day %> €</p>
+         <p> <strong>Location:</strong>
+         <%= @beach.location %></p>
 
+         <p> <strong>Rent per day:</strong>
+         <%= @beach.rent_per_day %> €</p>
+      </div>
+    </div>
+
+      <div class="col-xs-12 col-md-4">
+        <h1>New Booking</h1>
+          <%= simple_form_for [@beach, @booking] do |f| %>
+          <%= f.input :start_date %>
+          <%= f.input :end_date %>
+          <%= f.submit "Book me now", class: "btn btn-warning" %>
+          <%= link_to 'Go back', beaches_path, class: "btn btn-warning"   %>
+          <% end %>
+      </div>
+    </div>
   </div>
 </div>
-</div>
+
+
+
 
 
 
