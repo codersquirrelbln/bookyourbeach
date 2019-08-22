@@ -1,8 +1,9 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: orange;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   margin-bottom: 15px
+
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -15,4 +16,7 @@
 
 .fas fa-umbrella-beach {
   color: rgba(20, 198, 226, 0.9);
+}
+.navbar navbar-expand-sm navbar-light navbar-lewagon{
+  color: red;
 }
