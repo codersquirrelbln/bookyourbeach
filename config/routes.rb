@@ -1,22 +1,5 @@
 Rails.application.routes.draw do
  #resources 'shared/beaches'
-<<<<<<< HEAD
- # get 'beaches/index'
- # get 'beaches/show'
- # devise_for :users
-#   resources :beaches #do
-#     resources :bookings
-#   end
-# resources :beaches
-=======
-  # get 'beaches/index'
-  # get 'beaches/show'
-  # devise_for :users
-  #  resources :beaches #do
-#     resources :bookings
-#   end
-  # resources :beaches
->>>>>>> 252c5721bb5335f927b1dfbd61366fd85f3e2282
 
   devise_for :users
 
