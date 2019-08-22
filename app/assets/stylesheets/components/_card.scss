@@ -1,16 +1,17 @@
-
 .card-product {
   overflow: hidden;
-  height: 120px;
+  height: 320px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
+  border-radius: 30px;
+  margin-top: 50px;
 }
 
 .card-product img {
   height: 100%;
-  width: 120px;
+  width: 320px;
   object-fit: cover;
 }
 
@@ -21,7 +22,7 @@
 }
 
 .card-product p {
-  font-size: 12px;
+  font-size: 18px;
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;
@@ -32,13 +33,10 @@
   padding: 16px;
 }
 
-
 .card-trip {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  height: 300px;
-  margin-top: 20px;
   height: 320px;
   margin-top: 20px
 }
@@ -93,43 +91,7 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
   height: 500px;
-
 }
-.card-trip > img {
-  height: 200px;
-  width: 100%;
-  object-fit: cover;
-}
-.card-trip h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
-}
-.card-trip p {
-  font-size: 12px;
-  opacity: .7;
-  margin: 0;
-}
-.card-trip .card-trip-infos {
-  padding: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  position: relative;
-}
-.card-trip-infos .card-trip-user {
-  position: absolute;
-  right: 16px;
-  top: -20px;
-  width: 40px;
-}
-
-
-
-
-
-
-
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
