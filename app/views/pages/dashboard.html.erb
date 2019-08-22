@@ -1,9 +1,10 @@
-<h1>Our Dashboard</h1>
+<h1>Your Booking</h1>
 
-<div class="row">
+<div class="container">
+  <div class="row">
   <% @bookings.each do |booking|  %>
   <div class="col-xs-12 col-md-4">
-<div class="card-trip">
+  <div class="card-trip">
   <%= image_tag booking.beach.photo %>
   <div class="card-trip-infos">
     <div>
