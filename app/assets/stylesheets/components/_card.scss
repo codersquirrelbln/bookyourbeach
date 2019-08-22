@@ -1,14 +1,16 @@
 .card-product {
   overflow: hidden;
-  height: 320px;
+  height: 400px;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
-  border-radius: 30px;
-  margin-top: 50px;
+  border-radius: 20px;
+  margin-top: 10px;
 }
 
+.card-product > div {
+  padding: 0;
+}
 .card-product img {
   height: 100%;
   width: 320px;
@@ -30,16 +32,18 @@
 }
 
 .card-product .card-product-infos {
-  padding: 16px;
+  padding: 10px;
+  flex-grow: 1;
+  margin: 20px;
+  align-items: top
 }
 
-.navigation {
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+.card-product .booking-page {
+  padding: 30px;
+  justify-content: flex-end;
 
+
+}
 .card-trip {
   overflow: hidden;
   background: white;
