@@ -1,7 +1,8 @@
 <div class="container">
   <h1>Your Bookings</h1>
-  <div class="card-product2">
+
     <% @bookings.each do |booking|  %>
+    <div class="card-product2">
     <%= image_tag booking.beach.photo %>
     <div class="card-product-infos2">
       <strong><%= booking.beach.name %></strong>
@@ -14,10 +15,12 @@
       <h6 class="card-trip-pricing"><%= number_of_days %></h6>
     <%= link_to "Make changes", edit_booking_path(booking), class: 'btn btn-warning' %>
     <%= link_to "Cancel booking", dashboard_path, class: 'btn btn-warning' %>
+      </div>
     </div>
-  </div>
+    <% end %>
+
 </div>
-<% end %>
+
 
 
 
