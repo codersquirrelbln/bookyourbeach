@@ -1,4 +1,5 @@
 class BookingsController < ApplicationController
+
  def new
    @booking = Booking.new
    @beach = Beach.find(params[:beach_id])
@@ -39,4 +40,5 @@ class BookingsController < ApplicationController
    #   render ‘edit’
    # end
  end
+    # end
 end
