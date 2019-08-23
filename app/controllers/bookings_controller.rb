@@ -33,13 +33,18 @@ class BookingsController < ApplicationController
 
   def update
     @booking = Booking.find(params[:id])
+    if @booking.update(bookings_params)
+      redirect_to dashboard_path
+    else
+      render :new
+    end
     # @booking.start_date = params.
   end
 
   private
 
   def bookings_params
-    params.require(:booking).permit(:start_date, :end_date)
+    params.require(:booking).permit(:start_date, :end_date, :beach_id)
     # if @booking.update(params[:booking].permit(:client_id, :start_time, :length))
     #   flash[:notice] = 'Your booking was updated succesfully'
     # else

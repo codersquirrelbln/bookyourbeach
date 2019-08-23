@@ -10,7 +10,7 @@
       <h6> <%= booking.start_date %> </h6>
       <strong>To:</strong>
       <h6> <%= booking.end_date %> </h6>
-    <!-- if statment if end_date == start_date then don't add 1, else add 1? -->
+
       <h6> Number of days: </h6><% number_of_days = (booking.end_date - booking.start_date + 1).to_i %>
       <h6 class="card-trip-pricing"><%= number_of_days %></h6>
     <%= link_to "Make changes", edit_booking_path(booking), class: 'btn btn-warning' %>
