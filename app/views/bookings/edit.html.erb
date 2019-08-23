@@ -26,19 +26,16 @@
 
       <div class="col-xs-12 col-md-4">
         <h1>Change Booking</h1>
-          <%= simple_form_for [@booking] do |f| %>
-          <%= f.input :start_date %>
-          <%= f.input :end_date %>
-          <%= f.submit "Save changes", class: "btn btn-warning" %>
-          <%= link_to 'Discard', dashboard_path, class: "btn btn-warning"   %>
+        <%= simple_form_for [@booking], method: "get" do |f| %>
+          <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+          <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+          <%= f.submit "Save Changes", class: "btn btn-primary" %>
+          <%= link_to 'Cancel', dashboard_path, class: "btn btn-warning"   %>
           <% end %>
       </div>
     </div>
   </div>
 </div>
-
-
-
 
 
 
