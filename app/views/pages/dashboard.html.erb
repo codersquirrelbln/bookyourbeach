@@ -1,9 +1,10 @@
 <div class="container">
   <h1>Your Bookings</h1>
-  <div class="card-product2">
+
     <% @bookings.each do |booking|  %>
+    <div class="card-product2">
     <%= image_tag booking.beach.photo %>
-    <div class="card-product-infos2">
+<div class="card-product-infos2">
       <strong><%= booking.beach.name %></strong>
       <strong>From:</strong>
       <h6> <%= booking.start_date %> </h6>
@@ -13,11 +14,17 @@
       <h6> Number of days: </h6><% number_of_days = (booking.end_date - booking.start_date + 1).to_i %>
       <h6 class="card-trip-pricing"><%= number_of_days %></h6>
     <%= link_to "Make changes", edit_booking_path(booking), class: 'btn btn-warning' %>
-    <%= link_to "Cancel booking", dashboard_path, class: 'btn btn-warning' %>
+    <%= link_to booking_path(booking), class: 'btn btn-warning', method: :delete, data: { confirm: "Are you sure?" } do %>
+      <p> Cancel </p>
+      <% end %>
+      </div>
     </div>
-  </div>
+    <% end %>
 </div>
-<% end %>
+
+
+
+
 
 
 
