@@ -17,20 +17,24 @@
   color: white;
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-}.btn-flat {
+}
+.btn-flat {
   color: white;
   padding: 8px 24px;
   border-radius: 4px;
   background: orange;
   transition: background 0.3s ease;
   margin-top: 15px;
-  width: 500px;
-  justify-content:center;
-  float-left:30%;
 }
 .btn-primary {
     color: #fff;
-    background-color: #f3f3f3;
+    background-color: orange;
     border-color: #167FFB;
+    width: 500px;
 }
+.form {
+  display: flex;
+}
+
+
 
