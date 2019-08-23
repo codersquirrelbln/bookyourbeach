@@ -18,7 +18,6 @@ class BookingsController < ApplicationController
 
   # def show
   #   @booking = Booking.find(params[:id])
-
   # end
 
   def destroy
@@ -30,13 +29,12 @@ class BookingsController < ApplicationController
   def edit
     @booking = Booking.find(params[:id])
     @beach = @booking.beach
-
   end
 
   def update
     raise
     @booking = Booking.find(params[:id])
-#     @booking.start_date = params.
+    # @booking.start_date = params.
   end
 
   private
