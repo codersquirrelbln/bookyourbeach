@@ -32,7 +32,6 @@ class BookingsController < ApplicationController
   end
 
   def update
-    raise
     @booking = Booking.find(params[:id])
     # @booking.start_date = params.
   end
