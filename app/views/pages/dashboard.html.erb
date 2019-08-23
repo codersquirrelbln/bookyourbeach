@@ -1,29 +1,31 @@
-<h1>Our Dashboard</h1>
-
-<div class="row">
-  <% @bookings.each do |booking|  %>
-  <div class="col-xs-12 col-md-4">
-<div class="card-trip">
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" alt="picture of a beach" />
-  <div class="card-trip-infos">
-    <div>
+<div class="container">
+  <h1>Your Bookings</h1>
+  <div class="card-product2">
+    <% @bookings.each do |booking|  %>
+    <%= image_tag booking.beach.photo %>
+    <div class="card-product-infos2">
+      <strong><%= booking.beach.name %></strong>
+      <strong>From:</strong>
       <h6> <%= booking.start_date %> </h6>
+      <strong>To:</strong>
       <h6> <%= booking.end_date %> </h6>
-      <!-- if statment if end_date == start_date then don't add 1, else add 1? -->
-      <% number_of_days = (booking.end_date - booking.start_date + 1).to_i %>
-      <h6 class="card-trip-pricing"><%= number_of_days %></h6> <!-- insert pricing calculation -->
-      <%= link_to "Make changes", edit_booking_path(booking), class: 'btn btn-primary' %>
+    <!-- if statment if end_date == start_date then don't add 1, else add 1? -->
+      <h6> Number of days: </h6><% number_of_days = (booking.end_date - booking.start_date + 1).to_i %>
+      <h6 class="card-trip-pricing"><%= number_of_days %></h6>
+    <%= link_to "Make changes", edit_booking_path(booking), class: 'btn btn-warning' %>
+    <%= link_to "Cancel booking", dashboard_path, class: 'btn btn-warning' %>
     </div>
   </div>
 </div>
-  </div>
-  <% end %>
-</div>
-<br></br>
-<!-- button to go back to browse -->
- <%= link_to "Back to All Beaches", beaches_path, class: 'btn btn-primary' %>
+<% end %>
 
-<!-- if you click on the booking, it redirects to bookings_show (bookings/bookings_id/edit) -->
+
+
+
+
+
+
+
 
 
 

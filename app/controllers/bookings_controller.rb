@@ -1,5 +1,4 @@
 class BookingsController < ApplicationController
-
   def new
     @booking = Booking.new
     @beach = Beach.find(params[:beach_id])
@@ -37,6 +36,7 @@ class BookingsController < ApplicationController
   def update
     raise
     @booking = Booking.find(params[:id])
+#     @booking.start_date = params.
   end
 
   private
@@ -47,6 +47,5 @@ class BookingsController < ApplicationController
     #   flash[:notice] = 'Your booking was updated succesfully'
     # else
     #   render 'edit'
-    # end
   end
 end
