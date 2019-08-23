@@ -2,7 +2,12 @@ class BeachesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @beaches = Beach.all
+    if params[:query].present?
+      sql_query = "name ILIKE :query OR location ILIKE :query"
+      @beaches = Beach.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @beaches = Beach.all
+    end
   end
 
   def show
@@ -10,4 +15,3 @@ class BeachesController < ApplicationController
     @booking = Booking.new
   end
 end
-
