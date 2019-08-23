@@ -1,6 +1,7 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: orange;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 
 }
 
@@ -11,6 +12,13 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.fas  {
+  color: white;
+}
+.fas:hover  {
+  color: black;
+}
 .navbar-nav .nav-item a {
   color: white !important;
   font-size: 17px;
@@ -18,8 +26,3 @@
 .navbar-nav .nav-item a:hover {
   color: black !important;
 }
-.fa-umbrella-beach:before {
-    content: "\f5ca";
-    color: white;
-}
-

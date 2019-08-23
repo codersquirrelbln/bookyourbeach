@@ -3,7 +3,7 @@
   <div class="container">
     <h1>Have a break-<strong> rent a beach</strong>!</h1>
     <p>Change your routine and get an organic tan with one of our beaches around the world.</p>
-    <div class="f">
+    <div class="search" style="width: 90%">
     <%= form_tag beaches_path, method: :get do %>
   <%= text_field_tag :query,
     params[:query],
@@ -11,7 +11,7 @@
     placeholder: "Find a Beach"
   %>
 
-          <%= submit_tag "Search now", class:"btn btn-flat "   %>
+          <%= submit_tag "Search now", class:"btn btn-flat"    %>
 </div>
 <% end %>
 

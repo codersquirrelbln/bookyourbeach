@@ -2,6 +2,7 @@
   background-size: cover;
   background-position: center;
   padding: 180px 0;
+  height: 230px;
 }
 
 .banner h1 {
@@ -26,14 +27,15 @@
   transition: background 0.3s ease;
   margin-top: 15px;
 
-  width: 500px;
+  width: 50%;
+    display: block;
+  margin-right: auto;
+  margin-left: auto;
+
 }
-.btn-primary {
-    color: #fff;
-    background-color: orange;
-    border-color: #167FFB;
-    width: 500px;
-}
+
+
+
 
 
 
