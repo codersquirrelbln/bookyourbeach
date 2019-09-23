@@ -7,7 +7,7 @@ gem 'pg', '~> 0.21'
 gem 'puma'
 gem 'rails', '5.2.3'
 gem 'redis'
-gem 'devise'
+gem "devise", ">= 4.7.1"
 gem 'faker'
 
 gem 'autoprefixer-rails'
