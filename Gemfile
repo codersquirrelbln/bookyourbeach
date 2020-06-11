@@ -18,6 +18,8 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'pg_search'
 
+# gem "activesupport", ">= 5.2.4.3"
+
 group :development do
   gem 'web-console', '>= 3.3.0'
 end
